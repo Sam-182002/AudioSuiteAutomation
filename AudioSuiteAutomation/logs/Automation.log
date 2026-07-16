@@ -1,0 +1,23 @@
+2026-07-15 17:43:45 [main] [INFO ] BaseClass                 - Extent Report Configured
+2026-07-15 17:43:45 [main] [INFO ] BaseClass                 - Launching Chrome browser...
+2026-07-15 17:43:47 [main] [INFO ] BaseClass                 - Chrome browser launched successfully.
+2026-07-15 17:43:47 [main] [INFO ] BaseClass                 - Browser window maximized.
+2026-07-15 17:43:48 [main] [INFO ] BaseClass                 - Opened application URL: http://192.168.100.170/ens/
+2026-07-15 17:43:48 [main] [INFO ] LoginPage                 - Entered email: support@telesoftlabs.com
+2026-07-15 17:43:48 [main] [INFO ] LoginPage                 - Entered password.Telesuite@8765
+2026-07-15 17:43:48 [main] [INFO ] LoginPage                 - Clicked on login button.
+2026-07-15 17:43:48 [main] [INFO ] BaseClass                 - Session dialog detected.
+2026-07-15 17:43:49 [main] [INFO ] LoginPage                 - Entered email: support@telesoftlabs.com
+2026-07-15 17:43:50 [main] [INFO ] LoginPage                 - Entered password.Telesuite@8765
+2026-07-15 17:43:50 [main] [INFO ] LoginPage                 - Clicked on login button.
+2026-07-15 17:43:50 [main] [INFO ] BaseClass                 - Session dialog handled.
+2026-07-15 17:43:50 [main] [INFO ] BaseClass                 - Branch dialog detected.
+2026-07-15 17:43:51 [main] [INFO ] LoginPage                 - Selected branch: Bangalore
+2026-07-15 17:43:51 [main] [INFO ] BaseClass                 - Branch selected.
+2026-07-15 17:43:52 [main] [INFO ] BaseClass                 - Login  completed successfully.
+2026-07-15 17:43:52 [main] [INFO ] RecordingsTest            - Starting Recordings Functionality Test
+2026-07-15 17:43:53 [main] [INFO ] RecordingsPage            - Entering description: Code 999Black
+2026-07-15 17:43:54 [main] [INFO ] RecordingsPage            - Uploading voice file: E:/Samprith/TSLprojects/ENS/ENS Voice Files/Code_Black.wav
+2026-07-15 17:43:55 [main] [INFO ] RecordingsPage            - Clicked Save Changes button.
+2026-07-15 17:43:58 [main] [INFO ] BaseClass                 - Browser closed successfully.
+2026-07-15 17:43:58 [main] [INFO ] BaseClass                 - Extent Report flushed successfully.

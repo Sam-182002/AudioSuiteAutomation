@@ -1,0 +1,13 @@
+com\audiosuite\tests\LoginTest.class
+com\audiosuite\tests\UsersTest.class
+com\audiosuite\tests\ReportsTest.class
+com\audiosuite\tests\StatusTest.class
+com\audiosuite\tests\ConferenceTest.class
+com\audiosuite\tests\EmergencyTest.class
+com\audiosuite\tests\ContactTest.class
+com\audiosuite\tests\RolesTest.class
+com\audiosuite\tests\CLILocationTest.class
+com\audiosuite\tests\RecordingsTest.class
+com\audiosuite\tests\BroadcastTest.class
+com\audiosuite\tests\DashboardTest.class
+com\audiosuite\tests\SettingsTest.class

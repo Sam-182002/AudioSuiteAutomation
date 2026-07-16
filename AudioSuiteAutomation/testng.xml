@@ -1,0 +1,85 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AudioSuiteSuite" verbose="1">
+
+    <listeners>
+    
+        <listener class-name="com.audiosuite.reports.ReportListener"/>
+    </listeners>
+
+    
+
+    <test name="Dashboard">
+        <classes>
+            <class name="com.audiosuite.tests.DashboardTest"/>
+        </classes>
+    </test>
+    
+  <test name="Recordings">
+        <classes>
+            <class name="com.audiosuite.tests.RecordingsTest"/>
+        </classes>
+    </test>
+    
+    <test name="Emergency">
+        <classes>
+            <class name="com.audiosuite.tests.EmergencyTest"/>
+        </classes>
+    </test>
+
+  
+
+    <test name="Broadcast">
+        <classes>
+            <class name="com.audiosuite.tests.BroadcastTest"/>
+        </classes>
+    </test>
+
+    <test name="Conference">
+        <classes>
+            <class name="com.audiosuite.tests.ConferenceTest"/>
+        </classes>
+    </test>
+
+    <test name="Status">
+        <classes>
+            <class name="com.audiosuite.tests.StatusTest"/>
+        </classes>
+    </test>
+
+    <test name="Users">
+        <classes>
+            <class name="com.audiosuite.tests.UsersTest"/>
+        </classes>
+    </test>
+
+    <test name="Contact">
+        <classes>
+            <class name="com.audiosuite.tests.ContactTest"/>
+        </classes>
+    </test>
+
+    <test name="Reports">
+        <classes>
+            <class name="com.audiosuite.tests.ReportsTest"/>
+        </classes>
+    </test>
+
+    <test name="Roles">
+        <classes>
+            <class name="com.audiosuite.tests.RolesTest"/>
+        </classes>
+    </test>
+
+    <test name="Settings">
+        <classes>
+            <class name="com.audiosuite.tests.SettingsTest"/>
+        </classes>
+    </test>
+
+    <test name="CLILocation">
+        <classes>
+            <class name="com.audiosuite.tests.CLILocationTest"/>
+        </classes>
+    </test>
+
+</suite>

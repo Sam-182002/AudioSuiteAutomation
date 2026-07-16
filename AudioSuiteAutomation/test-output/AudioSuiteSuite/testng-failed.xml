@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AudioSuiteSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.audiosuite.reports.ReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Recordings(failed)">
+    <classes>
+      <class name="com.audiosuite.tests.RecordingsTest">
+        <methods>
+          <include name="reportBackup"/>
+          <include name="testRecordingsFunctionality"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.audiosuite.tests.RecordingsTest -->
+    </classes>
+  </test> <!-- Recordings(failed) -->
+  <test thread-count="5" name="Emergency(failed)">
+    <classes>
+      <class name="com.audiosuite.tests.EmergencyTest">
+        <methods>
+          <include name="testEmergencyFunctionality"/>
+          <include name="reportBackup"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.audiosuite.tests.EmergencyTest -->
+    </classes>
+  </test> <!-- Emergency(failed) -->
+</suite> <!-- Failed suite [AudioSuiteSuite] -->

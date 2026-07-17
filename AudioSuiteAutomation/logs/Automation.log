@@ -1,0 +1,24 @@
+2026-07-16 13:38:22 [main] [INFO ] BaseClass                 - Extent Report Configured
+2026-07-16 13:38:22 [main] [INFO ] BaseClass                 - Launching Chrome browser...
+2026-07-16 13:38:23 [main] [INFO ] BaseClass                 - Chrome browser launched successfully.
+2026-07-16 13:38:23 [main] [INFO ] BaseClass                 - Browser window maximized.
+2026-07-16 13:38:24 [main] [INFO ] BaseClass                 - Opened application URL: http://192.168.100.170/ens/
+2026-07-16 13:38:25 [main] [INFO ] LoginPage                 - Entered email: support@telesoftlabs.com
+2026-07-16 13:38:25 [main] [INFO ] LoginPage                 - Entered password.Telesuite@8765
+2026-07-16 13:38:25 [main] [INFO ] LoginPage                 - Clicked on login button.
+2026-07-16 13:38:27 [main] [INFO ] BaseClass                 - Branch dialog detected.
+2026-07-16 13:38:28 [main] [INFO ] LoginPage                 - Selected branch: Bangalore
+2026-07-16 13:38:28 [main] [INFO ] BaseClass                 - Branch selected.
+2026-07-16 13:38:29 [main] [INFO ] BaseClass                 - Login  completed successfully.
+2026-07-16 13:38:29 [main] [INFO ] EmergencyTest             - Starting Emergency Functionality Test
+2026-07-16 13:38:31 [main] [INFO ] EmergencyPage             - Clicked on Add New Emergency icon.
+2026-07-16 13:38:31 [main] [INFO ] NewEmergencyPage          - Entered Emergency Name: Test2026-07-16T13-38-31.149065200
+2026-07-16 13:38:32 [main] [INFO ] NewEmergencyPage          - Entered Description: Testing
+2026-07-16 13:38:32 [main] [INFO ] NewEmergencyPage          - Entered Outbound CLI: 1234567
+2026-07-16 13:38:34 [main] [INFO ] NewEmergencyPage          - Members is displayed and selected.
+2026-07-16 13:38:36 [main] [INFO ] NewEmergencyPage          - Checked Access Code and entered code: 1245
+2026-07-16 13:38:37 [main] [INFO ] NewEmergencyPage          - Checked CLI Trigger and added CLI number: 7894561230
+2026-07-16 13:38:37 [main] [INFO ] EmergencyTest             - Clicked Save button.
+2026-07-16 13:38:39 [main] [INFO ] EmergencyTest             - No error message displayed after saving emergency.
+2026-07-16 13:38:39 [main] [INFO ] EmergencyTest             - Confirmed Save action.
+2026-07-16 13:38:40 [main] [INFO ] EmergencyPage             - Clicked on Emergency button to trigger.

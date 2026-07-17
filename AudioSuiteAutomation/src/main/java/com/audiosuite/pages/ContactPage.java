@@ -11,7 +11,14 @@ import org.openqa.selenium.support.ui.Select;
 public class ContactPage extends GenericPage {
 
 	
+<<<<<<< HEAD
 	@FindBy(xpath = "//button[@mattooltip='Add new member']")
+=======
+
+	@FindBy(id = "contactsTable")
+	private WebElement contactsTable;
+	@FindBy(css = ".add-contact-icon")
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	private WebElement addContactIcon;
 
 	// Filter / Search
@@ -27,6 +34,7 @@ public class ContactPage extends GenericPage {
 	private WebElement searchBar;
 
 	// Add/Edit Contact form fields
+<<<<<<< HEAD
 	@FindBy(id = "groupnames")
 	private WebElement groupNameField;
 	@FindBy(id = "member")
@@ -46,6 +54,29 @@ public class ContactPage extends GenericPage {
 	@FindBy(xpath = "//button[normalize-space()='Yes']")
 	private WebElement deleteConfirmYes;
 	@FindBy(xpath = "//button[normalize-space()='OK']")
+=======
+	@FindBy(id = "groupName")
+	private WebElement groupNameField;
+	@FindBy(id = "memberName")
+	private WebElement memberNameField;
+	@FindBy(id = "phoneNumber")
+	private WebElement phoneNumberField;
+	@FindBy(id = "alternateNumber")
+	private WebElement alternateNumberField;
+	@FindBy(id = "accessCode")
+	private WebElement accessCodeField;
+	@FindBy(id = "emailId")
+	private WebElement emailIdField;
+	@FindBy(id = "contactType")
+	private WebElement contactTypeDropdown;
+	@FindBy(css = ".save-icon")
+	private WebElement saveIcon;
+	@FindBy(css = ".cancel-icon")
+	private WebElement cancelIcon;
+	@FindBy(xpath = "//button[normalize-space()='Yes']")
+	private WebElement deleteConfirmYes;
+	@FindBy(xpath = "//button[normalize-space()='Yes']")
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	private WebElement saveConfirmYes;
 
 	// Import / Export
@@ -75,6 +106,12 @@ public class ContactPage extends GenericPage {
 		super(driver);
 	}
 
+<<<<<<< HEAD
+=======
+	public boolean isContactsTableDisplayed() {
+		return contactsTable.isDisplayed();
+	}
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 
 	public void searchContact(String keyword) {
 		searchBar.clear();
@@ -103,7 +140,11 @@ public class ContactPage extends GenericPage {
 	}
 
 	public void addContact(String groupName, String memberName, String phoneNumber, String alternateNumber,
+<<<<<<< HEAD
 			String accessCode, String emailId) {
+=======
+			String accessCode, String emailId, String contactType) {
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 		clickAddContact();
 		groupNameField.clear();
 		groupNameField.sendKeys(groupName);
@@ -121,10 +162,21 @@ public class ContactPage extends GenericPage {
 		}
 		emailIdField.clear();
 		emailIdField.sendKeys(emailId);
+<<<<<<< HEAD
+=======
+		new Select(contactTypeDropdown).selectByVisibleText(contactType);
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 		saveIcon.click();
 		saveConfirmYes.click();
 	}
 
+<<<<<<< HEAD
+=======
+	private String rowByMemberNameXpath(String memberName) {
+		return "//table[@id='contactsTable']//td[normalize-space()='" + memberName + "']/ancestor::tr";
+	}
+
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	public void editContact(String memberName) {
 	}
 

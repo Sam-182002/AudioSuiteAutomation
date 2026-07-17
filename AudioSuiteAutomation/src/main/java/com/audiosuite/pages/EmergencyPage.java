@@ -4,10 +4,17 @@ package com.audiosuite.pages;
 import java.time.Duration;
 
 import org.apache.logging.log4j.Logger;
+<<<<<<< HEAD
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+=======
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,6 +28,7 @@ public class EmergencyPage extends GenericPage {
 	// Tabs
 	@FindBy(xpath = "//div[@role='tab' and normalize-space()='Emergency']")
 	private WebElement emergencyTab;
+<<<<<<< HEAD
 	// Table & Actions
 		@FindBy(id = "emergencyTable")
 		private WebElement emergencyTable;
@@ -41,6 +49,24 @@ public class EmergencyPage extends GenericPage {
 	private WebElement completedTab;
 
 	
+=======
+	@FindBy(xpath = "//div[@role='tab' and normalize-space()='Live']")
+	private WebElement liveTab;
+	@FindBy(xpath = "//div[@role='tab' and normalize-space()='Completed']")
+	private WebElement completedTab;
+
+	// Table & Actions
+	@FindBy(id = "emergencyTable")
+	private WebElement emergencyTable;
+	@FindBy(xpath = "//button[contains(@mattooltip,'New Emergency')]")
+	private WebElement addNewIcon;
+	@FindBy(xpath = "//mat-cell[contains(@class,'scheduleName')]//div[contains(text(),'Test')]/following::mat-cell/div/label")
+	private WebElement emergencyButton;
+	@FindBy(xpath = "//h2[contains(text(),'Are you sure you want to trigger the Emergency?')]")
+	private WebElement confirmTriggerDailogbox;
+	@FindBy(xpath = "//button[normalize-space()='Yes']")
+	private WebElement confirmTriggerYes;
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	
 	// Pagination
 	@FindBy(css = ".items-per-page")
@@ -82,12 +108,19 @@ public class EmergencyPage extends GenericPage {
 	}
 
 	// Trigger via GUI Emergency button
+<<<<<<< HEAD
 	public String triggerEmergencyButton(String scheduleName) {
 		driver.findElement(By.xpath("//mat-cell[contains(@class,'scheduleName')][normalize-space()='"+scheduleName+"']/following::mat-cell/div/label[text()='EMERGENCY']")).click();
+=======
+	public void triggerEmergencyButton() {
+		wait.until(ExpectedConditions.elementToBeClickable(emergencyButton));
+		emergencyButton.click();
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 		log.info("Clicked on Emergency button to trigger.");
 		if(confirmTriggerDailogbox.isDisplayed()) {
 			confirmTriggerYes.click();
 		}
+<<<<<<< HEAD
 		return scheduleName;
 	}
 	
@@ -104,6 +137,9 @@ public class EmergencyPage extends GenericPage {
     	liveTab.click();
     	log.info("Clicked on Live tab to check for Running status.");
 		return StatusRunningLabel.isDisplayed();
+=======
+		
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	}
 
 	// Pagination

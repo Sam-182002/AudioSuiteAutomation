@@ -12,6 +12,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.audiosuite.utils.LogUtil;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 public class NewEmergencyPage extends GenericPage {
 
 	Actions actions = new Actions(driver);
@@ -75,9 +79,15 @@ public class NewEmergencyPage extends GenericPage {
 	@FindBy(id = "selectEnsVoiceFile")
 	private WebElement selectEnsVoiceFileDropdown;
 //-------------accessType --------------
+<<<<<<< HEAD
 	@FindBy(xpath = "//div[contains(@class,'mat-radio') and contains(normalize-space(),'Public')]")
 	private WebElement publicRadio;
 	@FindBy(xpath = "//div[contains(@class,'mat-radio') and contains(normalize-space(),'Private')]")
+=======
+	@FindBy(xpath = "//mat-radio-group[@name='accessType']/descendant::div[contains(normalize-space(),'Public')]")
+	private WebElement publicRadio;
+	@FindBy(xpath = "//mat-radio-group[@name='accessType']/descendant::div[contains(normalize-space(),'Private')]")
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	private WebElement privateRadio;
 
 	// Participants Section
@@ -118,6 +128,10 @@ public class NewEmergencyPage extends GenericPage {
 	private WebElement cancelMemberButton;
 	@FindBy(xpath = "//button[normalize-space()='Close']")
 	private WebElement closeButton;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 
 	// Controls
 	@FindBy(xpath = "//button[normalize-space()='Save']")
@@ -236,6 +250,10 @@ public class NewEmergencyPage extends GenericPage {
 		log.info("Selected Schedule: Private");
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	// Import Contacts
 	public void openExcelImport() {
 		excelUploadIcon.click();
@@ -286,6 +304,7 @@ public class NewEmergencyPage extends GenericPage {
 		Thread.sleep(1000); // Wait for the validation dialog to appear
 		validationOkButton.click();
 	}
+<<<<<<< HEAD
 
 	public boolean isErrorMessageDisplayed() {
 		try {
@@ -309,6 +328,31 @@ public class NewEmergencyPage extends GenericPage {
 	public void addMember(int groupCount) {
 		List<WebElement> MembersList = driver.findElements(By.xpath("//input[contains(@name,'group.ischecked')]"));
 		if (!MembersList.isEmpty()) {
+=======
+	
+	public boolean isErrorMessageDisplayed() {
+	    try {
+	        return errorMessage.isDisplayed();
+	    } catch (Exception e) {
+	        return false;
+	    }
+	}
+
+	
+	public void selectMembers(int groupCount) {	
+		int actualCount = numberOfGroups.size()-1;
+		if (groupCount > actualCount ) {
+			log.error("Group count exceeds available groups. Available groups: " + actualCount);
+			return;
+		}
+		WebElement selectMembers = driver.findElement(By.xpath("//input[contains(@name,'group.ischecked-"+groupCount+"')]"));
+		actions.moveToElement(selectMembers).click().perform();
+	}
+	
+	public void addMember(int groupCount) {
+		List<WebElement> MembersList = driver.findElements(By.xpath("//input[contains(@name,'group.ischecked')]"));
+	    if (!MembersList.isEmpty())  {
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 			selectMembers(groupCount);
 			log.info("Members is displayed and selected.");
 		} else {
@@ -321,8 +365,13 @@ public class NewEmergencyPage extends GenericPage {
 		}
 	}
 
+<<<<<<< HEAD
 	public void saveEmergency(String name, String description, String outboundCli, int groupCount)
 			throws InterruptedException {
+=======
+	
+	public void saveEmergency(String name, String description, String outboundCli,int groupCount) throws InterruptedException {
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 		enterEmergencyName(name);
 		Thread.sleep(500);
 		log.info("Entered Emergency Name: " + name);
@@ -339,6 +388,7 @@ public class NewEmergencyPage extends GenericPage {
 	public void clickSave() {
 		saveButton.click();
 	}
+<<<<<<< HEAD
 
 	public void clickSaveAndTrigger() {
 		saveAndTriggerBtn.click();
@@ -348,6 +398,14 @@ public class NewEmergencyPage extends GenericPage {
 		cancelButton.click();
 	}
 
+=======
+	public void clickSaveAndTrigger() {
+		saveAndTriggerBtn.click();
+	}
+	public void clickCancel() {
+		cancelButton.click();
+	}
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	public void confirmSave() {
 		confirmDialogOk.click();
 	}

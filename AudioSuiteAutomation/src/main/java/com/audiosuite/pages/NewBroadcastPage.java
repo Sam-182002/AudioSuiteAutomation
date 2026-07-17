@@ -12,6 +12,7 @@ public class NewBroadcastPage extends GenericPage {
 
 
 	// Voice Broadcast Details Section
+<<<<<<< HEAD
 	@FindBy(id = "scheduleName")
 	private WebElement broadcastNameField;
 	@FindBy(id = "description")
@@ -23,6 +24,19 @@ public class NewBroadcastPage extends GenericPage {
 	@FindBy(id = "timeSlotFrom")
 	private WebElement startTimeField;
 	@FindBy(id = "timeSlotTo")
+=======
+	@FindBy(id = "broadcastName")
+	private WebElement broadcastNameField;
+	@FindBy(id = "description")
+	private WebElement descriptionField;
+	@FindBy(id = "startDate")
+	private WebElement startDateField;
+	@FindBy(id = "endDate")
+	private WebElement endDateField;
+	@FindBy(id = "startTime")
+	private WebElement startTimeField;
+	@FindBy(id = "endTime")
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	private WebElement endTimeField;
 	@FindBy(id = "selectCli")
 	private WebElement selectCliDropdown;
@@ -32,9 +46,15 @@ public class NewBroadcastPage extends GenericPage {
 	private WebElement autoPauseField;
 	@FindBy(id = "autoResume")
 	private WebElement autoResumeField;
+<<<<<<< HEAD
 	@FindBy(xpath = "//div[contains(@class,'mat-radio') and contains(normalize-space(),'Public')]")
 	private WebElement publicRadio;
 	@FindBy(xpath = "//div[contains(@class,'mat-radio') and contains(normalize-space(),'Private')]")
+=======
+	@FindBy(xpath = "//input[@type='radio' and @value='Public']")
+	private WebElement publicRadio;
+	@FindBy(xpath = "//input[@type='radio' and @value='Private']")
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	private WebElement privateRadio;
 
 	// Voice Files Selection (IVR)

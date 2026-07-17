@@ -1,7 +1,10 @@
 package com.audiosuite.pages;
 
 import org.apache.logging.log4j.Logger;
+<<<<<<< HEAD
 import org.openqa.selenium.By;
+=======
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +34,11 @@ public class RecordingsPage extends GenericPage {
 	private WebElement voiceFileBrowseBtn;
 	@FindBy(xpath = "//button[@mattooltip='Save Changes']")
 	private WebElement saveRecordingBtn;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	@FindBy(css = ".items-per-page")
 	private WebElement itemsPerPageDropdown;
 	@FindBy(css = ".pagination-next")
@@ -71,6 +78,7 @@ public class RecordingsPage extends GenericPage {
 		saveRecordingBtn.click();
 		log.info("Clicked Save Changes button.");
 	}
+<<<<<<< HEAD
   // Update Voice Files
 	public void updateVoiceFile(String FileName,String description, String filePath) throws InterruptedException {
 		driver.findElement(By.xpath("//mat-cell[contains(text(),'"+FileName+"')]/following-sibling::mat-cell/button[@mattooltip='Edit Recording']")).click();
@@ -89,6 +97,9 @@ public class RecordingsPage extends GenericPage {
 		log.info("Clicked Yes to confirm deletion of voice file: " + FileName);
 		Thread.sleep(1000); 
 	}
+=======
+
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	// Pagination
 	public void setItemsPerPage(String value) {
 		new Select(itemsPerPageDropdown).selectByVisibleText(value);

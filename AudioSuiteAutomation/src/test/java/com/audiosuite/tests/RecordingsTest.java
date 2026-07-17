@@ -21,7 +21,11 @@ public class RecordingsTest extends BaseClass {
 	DashboardPage dashboardPage = new DashboardPage(driver);
 	RecordingsPage recordingsPage = new RecordingsPage(driver);
 	dashboardPage.goToRecordings();
+<<<<<<< HEAD
 	//recordingsPage.addVoiceFile("Code 999Black", configReader.getConfigData("voiceFilePath.Code_Black"));
+=======
+	recordingsPage.addVoiceFile("Code 999Black", configReader.getConfigData("voiceFilePath.Code_Black"));
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	Thread.sleep(2000);	
 	}
 

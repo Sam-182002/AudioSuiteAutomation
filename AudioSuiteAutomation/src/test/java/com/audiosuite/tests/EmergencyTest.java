@@ -11,6 +11,7 @@ import com.audiosuite.pages.NewEmergencyPage;
 import com.audiosuite.utils.JavaUtility;
 import com.audiosuite.utils.LogUtil;
 
+<<<<<<< HEAD
 public class EmergencyTest extends BaseClass {
 	JavaUtility jutil = new JavaUtility();
 	public static Logger log = LogUtil.getLogger(EmergencyTest.class);
@@ -49,5 +50,39 @@ public class EmergencyTest extends BaseClass {
 		log.info("Emergency status is running as expected.");
 		softAssert.assertAll();
 		log.info("Emergency Functionality Test completed successfully");
+=======
+
+
+
+public class EmergencyTest extends BaseClass {
+	JavaUtility jutil = new JavaUtility();
+	public static  Logger log = LogUtil.getLogger(EmergencyTest.class);
+	@Test
+public void testEmergencyFunctionality() throws InterruptedException {
+	EmergencyPage emergencyPage = new EmergencyPage(driver);
+	NewEmergencyPage newEmergencyPage = new NewEmergencyPage(driver);
+	DashboardPage dashboardPage = new DashboardPage(driver);
+	
+	log.info("Starting Emergency Functionality Test");
+	dashboardPage.goToEmergency();
+	emergencyPage.clickAddNew();
+	newEmergencyPage.saveEmergency("Test", "Testing", "1234567",1);Thread.sleep(1000);
+	newEmergencyPage.expandSecurityOptions();	Thread.sleep(1000);
+	newEmergencyPage.addAccessCode("1245"); 
+	newEmergencyPage.addCliTrigger("7894561230");
+	newEmergencyPage.clickSave(); log.info("Clicked Save button.");	
+	if (newEmergencyPage.isErrorMessageDisplayed()) {
+	    log.error("Error message displayed: {}", newEmergencyPage.getErrorMessage());
+	    newEmergencyPage.handleValidationMessage();
+	} else {
+		log.info("No error message displayed after saving emergency.");
+		newEmergencyPage.confirmSave();
+		log.info("Confirmed Save action.");
+	}
+	SoftAssert softAssert = new SoftAssert();
+	softAssert.assertEquals(newEmergencyPage.getSnackMessage(), "Emergency is Saved Successfully.");
+	softAssert.assertAll();
+	log.info("Emergency Functionality Test completed successfully");
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
 	}
 }

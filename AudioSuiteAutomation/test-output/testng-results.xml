@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -159,6 +160,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- reportBackup -->
       </class> <!-- com.audiosuite.tests.EmergencyTest -->
+=======
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-15T17:43:52 IST" name="Default suite" finished-at="2026-07-15T17:43:57 IST" duration-ms="5167">
+    <groups>
+    </groups>
+    <test started-at="2026-07-15T17:43:52 IST" name="Default test" finished-at="2026-07-15T17:43:57 IST" duration-ms="5167">
+      <class name="com.audiosuite.tests.RecordingsTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.audiosuite.tests.RecordingsTest@3ce3db41]" started-at="2026-07-15T17:43:45 IST" name="openBrowser" finished-at="2026-07-15T17:43:52 IST" duration-ms="7434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="testRecordingsFunctionality()[pri:0, instance:com.audiosuite.tests.RecordingsTest@3ce3db41]" started-at="2026-07-15T17:43:52 IST" name="testRecordingsFunctionality" finished-at="2026-07-15T17:43:57 IST" duration-ms="5117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecordingsFunctionality -->
+        <test-method is-config="true" signature="reportBackup()[pri:0, instance:com.audiosuite.tests.RecordingsTest@3ce3db41]" started-at="2026-07-15T17:43:57 IST" name="reportBackup" finished-at="2026-07-15T17:43:58 IST" duration-ms="978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportBackup -->
+      </class> <!-- com.audiosuite.tests.RecordingsTest -->
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

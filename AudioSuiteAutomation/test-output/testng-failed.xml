@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.audiosuite.tests.EmergencyTest">
         <methods>
           <include name="testEmergencyFunctionality"/>
@@ -10,6 +11,15 @@
           <include name="openBrowser"/>
         </methods>
       </class> <!-- com.audiosuite.tests.EmergencyTest -->
+=======
+      <class name="com.audiosuite.tests.RecordingsTest">
+        <methods>
+          <include name="reportBackup"/>
+          <include name="testRecordingsFunctionality"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.audiosuite.tests.RecordingsTest -->
+>>>>>>> 423841aa85f2b92229b38dd3beae47495ab0dc74
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
